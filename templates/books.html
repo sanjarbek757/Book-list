@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Books</title>
+</head>
+<body>
+    <h1>Books table</h1>
+    <table border="4px">
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Author</td>
+            <td>Price</td>
+            <td>Description</td>
+        </tr>
+        {% for book in books %}
+            <tr>
+                <td>{{book.id}}</td>
+                <td>{{book.title}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.price}}</td>
+                <td>{{book.description}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
